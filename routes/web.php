@@ -56,6 +56,8 @@ Route::get('/dashboard/req/pending', [AdminController::class, 'pending_list'])->
 Route::get('/dashboard/req/create', [AdminController::class, 'req_new'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::post('/dashboard/req/validate', [AdminController::class, 'req_store'])->middleware(['auth', 'verified'])->name('req.store');
 Route::get('/dashboard/pay', [AdminController::class, 'pay'])->middleware(['auth', 'verified'])->name('request.pay');
+Route::post('/dashboard/pay/store', [AdminController::class, 'pay_store'])->middleware(['auth', 'verified'])->name('request.pay.store');
+Route::get('/dashboard/pay/history', [AdminController::class, 'pay_history'])->middleware(['auth', 'verified'])->name('request.pay.history');
 Route::get('/dashboard/setting', [AdminController::class, 'setting'])->middleware(['auth', 'verified'])->name('request.setting');
 
 require __DIR__ . '/auth.php';

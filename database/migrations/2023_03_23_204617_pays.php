@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('hospital_id')->constrained();
             $table->string('validrequest_code');
             $table->string('amount');
+            $table->string('status')->default('unconfirmed');
+            $table->string('updated_by')->default('null');
             $table->timestamps();
         });
     }

@@ -33,7 +33,10 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+
 </head>
 
 <body class="font-sans text-gray-900 antialiased">

@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Pay;
 use App\Models\RequestList;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Requests\StoreRequestCreate;
+use App\Models\ValidRequest;
 
 class AdminController extends Controller
 {
@@ -49,6 +51,7 @@ class AdminController extends Controller
             ->join('requests', 'validrequests.request_code', '=', 'requests.code')
             ->select('validrequests.*', 'requests.treatment', 'requests.cost')
             ->where('hospital_id', Auth::user()->hospital->id)
+            ->where('valid', 'true')
             ->get();
         return view('app.admin.req_list', compact('lists'));
     }
@@ -66,19 +69,47 @@ class AdminController extends Controller
             ->join('validrequests', 'validrequests.code', '=', 'pays.validrequest_code')
             ->join('requests', 'requests.code', '=', 'validrequests.request_code')
             ->select('validrequests.*', 'pays.*', 'requests.treatment',  'requests.cost')
-            ->where('hospital_id', Auth::user()->hospital->id)
+            ->where('pays.hospital_id', Auth::user()->hospital->id)
+            ->where('pays.status', 'unconfirmed')
             ->get();
 
         return view('app.admin.pay', compact('lists'));
+    }
+
+    public function pay_store(Request $request)
+    {
+        $pay = Pay::where('code', $request->code)
+            ->update(['status' => 'confirmed'])
+            ->update(['updated_by' => Auth::user()->login]);
+
+        $delete = ValidRequest::where('code', $request->code)
+            ->update(['valid' => 'false']);
+
+        if ($pay && $delete) {
+            Alert::toast("La demande a été enregistré", 'success');
+            return back();
+        } else {
+            Alert::toast('Une erreur est survenue', 'error');
+            return back();
+        }
+    }
+
+    public function pay_history()
+    {
+        // $lists = Pay::where('hospital_id', Auth::user()->hospital->id)->get();
+        $lists = DB::table('pays')
+            ->join('validrequests', 'validrequests.code', '=', 'pays.validrequest_code')
+            ->join('requests', 'requests.code', '=', 'validrequests.request_code')
+            ->select('validrequests.*', 'pays.*', 'requests.treatment',  'requests.cost')
+            ->where('pays.hospital_id', Auth::user()->hospital->id)
+            ->where('pays.status', 'confirmed')
+            ->get();
+
+        return view('app.admin.pay_history', compact('lists'));
     }
 
     public function setting()
     {
         return view('app.admin.setting');
     }
-
-    // public function setting_update()
-    // {
-
-    // }
 }

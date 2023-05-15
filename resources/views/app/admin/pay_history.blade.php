@@ -35,7 +35,11 @@
                                             </th>
                                             <th
                                                 class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-50 text-slate-500 border-slate-100">
-                                                Valider le paiement
+                                                Valider Par
+                                            </th>
+                                            <th
+                                                class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-slate-50 text-slate-500 border-slate-100">
+                                                Date
                                             </th>
                                         </tr>
                                     </thead>
@@ -59,13 +63,11 @@
                                             </td>
                                             <td
                                                 class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <form action="{{ route('pay_store') }}" method="post">
-                                                    @csrf
-                                                    <input type="hidden" name="code" value="{{ $list->validrequest_code }}">
-                                                    <button type="submit"
-                                                        class="bg-red-400 text-white text-sm font-bold uppercase p-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                                        href=""><i class="fas fa-check"></i></button>
-                                                </form>
+                                                {{ $list->updated_by }}
+                                            </td>
+                                            <td
+                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                {{ $list->updated_at }}
                                             </td>
                                         </tr>
                                     </tbody>

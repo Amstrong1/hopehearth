@@ -33,8 +33,11 @@
 
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/script.js') }}"></script>
+
 </head>
 
 <body class="font-sans antialiased">

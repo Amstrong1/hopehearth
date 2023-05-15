@@ -18,6 +18,7 @@ class GiftController extends Controller
         $lists = DB::table('validrequests')
             ->join('requests', 'validrequests.request_code', '=', 'requests.code')
             ->select('validrequests.*', 'requests.treatment', 'requests.cost')
+            ->where('valid', 'true')
             ->get();
         return view('app.gift.index', compact('lists'));
     }
