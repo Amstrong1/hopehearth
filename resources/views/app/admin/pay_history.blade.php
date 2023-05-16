@@ -12,7 +12,7 @@
             <div class="flex flex-wrap mt-4">
                 <div class="w-full mb-12 px-4">
                     <div class="relative flex flex-col min-w-0 break-words w-full mb-6 rounded">
-                        @forelse ($lists as $list)
+                        @if ($lists->count() !== 0)
                             <div class="block w-full overflow-x-auto bg-blueGray-100">
                                 <table class="items-center w-full bg-transparent border-collapse">
                                     <thead>
@@ -44,38 +44,40 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td
-                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                {{ $list->nom }}
-                                            </td>
-                                            <td
-                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                {{ $list->prenom }}
-                                            </td>
-                                            <td
-                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                {{ $list->treatment }}
-                                            </td>
-                                            <td
-                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                {{ $list->amount }}
-                                            </td>
-                                            <td
-                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                {{ $list->updated_by }}
-                                            </td>
-                                            <td
-                                                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                {{ $list->updated_at }}
-                                            </td>
-                                        </tr>
+                                        @foreach ($lists as $list)
+                                            <tr>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                    {{ $list->nom }}
+                                                </td>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                    {{ $list->prenom }}
+                                                </td>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                    {{ $list->treatment }}
+                                                </td>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                    {{ $list->amount }}
+                                                </td>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                    {{ $list->updated_by }}
+                                                </td>
+                                                <td
+                                                    class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                                                    {{ $list->updated_at }}
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
-                        @empty
+                        @else
                             <span class="font-semibold text-white">Aucune données à afficher</span>
-                        @endforelse
+                        @endif
                     </div>
                 </div>
             </div>

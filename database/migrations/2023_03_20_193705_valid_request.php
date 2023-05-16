@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('request_code');
             $table->string('code');
             $table->string('transmis')->default('false');
+            $table->string('valid')->default('true');
             $table->timestamps();
         });
     }

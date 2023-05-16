@@ -51,7 +51,7 @@ class AdminController extends Controller
             ->join('requests', 'validrequests.request_code', '=', 'requests.code')
             ->select('validrequests.*', 'requests.treatment', 'requests.cost')
             ->where('hospital_id', Auth::user()->hospital->id)
-            ->where('valid', 'true')
+            ->where('validrequests.valid', 'true')
             ->get();
         return view('app.admin.req_list', compact('lists'));
     }
@@ -78,9 +78,8 @@ class AdminController extends Controller
 
     public function pay_store(Request $request)
     {
-        $pay = Pay::where('code', $request->code)
-            ->update(['status' => 'confirmed'])
-            ->update(['updated_by' => Auth::user()->login]);
+        $pay = Pay::where('validrequest_code', $request->code)
+            ->update(['status' => 'confirmed', 'updated_by' => Auth::user()->login]);
 
         $delete = ValidRequest::where('code', $request->code)
             ->update(['valid' => 'false']);
