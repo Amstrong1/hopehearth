@@ -4,23 +4,23 @@
         <div class="relative bg-pink-600 pb-32 pt-12">
 
         </div>
-        <div class="px-4 md:px-10 mx-auto w-full -mt-24">
+        <div class="px-4 md:px-10 w-full -mt-24">
             <div class="flex flex-wrap">
-                <div class="w-full lg:w-8/12 px-4">
+                <div class="w-full lg:w-8/12 px-4 mx-auto">
                     <div
                         class="relative flex flex-col justify-center min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
                         <div class="rounded-t bg-white mb-0 px-6 py-6">
-                            <div class="text-center flex justify-between">
-                                <h6 class="text-blueGray-700 text-xl font-bold">
+                            <div class="">
+                                <h1 class="text-blueGray-700 text-xl font-bold">
                                     Devenir partenaire
-                                </h6>
+                                </h1>
                             </div>
                         </div>
                         <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
                             <form action="{{ route('partner.store') }}" method="post">
                                 @csrf
                                 <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
-                                    Personal Information
+                                    Veuillez fournir ces informations
                                 </h6>
                                 <div class="flex flex-wrap">
                                     <div class="w-full md:w-6/12 px-4">

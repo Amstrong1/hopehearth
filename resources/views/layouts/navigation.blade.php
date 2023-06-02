@@ -20,7 +20,8 @@
         </div>
         <ul
             class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center text-center">
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('welcome') }}">Acceuil</a></li>
+            <li><a class="text-sm text-gray-400 active:text-blue-600 hover:text-gray-500"
+                    href="{{ route('welcome') }}">Acceuil</a></li>
             <li class="text-gray-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
                     class="w-4 h-4 current-fill" viewBox="0 0 24 24">
@@ -28,7 +29,8 @@
                         d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-blue-600 font-bold" href="{{ route('gift') }}">Faire un don</a></li>
+            <li><a class="text-sm text-gray-400 active:text-blue-600 font-bold" href="{{ route('gift') }}">Faire un
+                    don</a></li>
             <li class="text-gray-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
                     class="w-4 h-4 current-fill" viewBox="0 0 24 24">
@@ -36,7 +38,8 @@
                         d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('follow.auth') }}">Suivre un
+            <li><a class="text-sm text-gray-400 active:text-blue-600 hover:text-gray-500"
+                    href="{{ route('follow.auth') }}">Suivre un
                     patient</a></li>
             <li class="text-gray-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
@@ -45,7 +48,8 @@
                         d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('partner.create') }}">Devenir
+            <li><a class="text-sm text-gray-400 active:text-blue-600 hover:text-gray-500"
+                    href="{{ route('partner.create') }}">Devenir
                     partenaire</a></li>
             <li class="text-gray-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
@@ -54,7 +58,8 @@
                         d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                 </svg>
             </li>
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('request.create') }}">Faire une
+            <li><a class="text-sm text-gray-400 active:text-blue-600 hover:text-gray-500"
+                    href="{{ route('request.create') }}">Faire une
                     demande</a></li>
             <li class="text-gray-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
@@ -64,7 +69,8 @@
                 </svg>
             </li>
 
-            <li><a class="text-sm text-gray-400 hover:text-gray-500" href="{{ route('request.auth') }}">Suivre ma
+            <li><a class="text-sm text-gray-400 active:text-blue-600 hover:text-gray-500"
+                    href="{{ route('request.auth') }}">Suivre ma
                     demande</a></li>
             <li class="text-gray-300 mx-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
@@ -74,7 +80,7 @@
                 </svg>
             </li>
 
-            <li><a class="text-sm text-gray-400 hover:text-gray-500"
+            <li><a class="text-sm text-gray-400 active:text-blue-600 hover:text-gray-500"
                     href="{{ route('welcome') . '#contact' }}">Contact</a></li>
         </ul>
     </nav>
@@ -92,7 +98,7 @@
                     </svg>
                 </a>
                 <button class="navbar-close">
-                    <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                    <svg class="h-6 w-6 text-gray-400 active:text-blue-600cursor-pointer hover:text-gray-500"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M6 18L18 6M6 6l12 12">
@@ -103,31 +109,31 @@
             <div>
                 <ul>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                        <a class="block p-4 text-sm font-semibold text-gray-400 active:text-blue-600 hover:bg-blue-50 hover:text-blue-600 rounded"
                             href="{{ route('welcome') }}">Accueil</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                        <a class="block p-4 text-sm font-semibold text-gray-400 active:text-blue-600 hover:bg-blue-50 hover:text-blue-600 rounded"
                             href="{{ route('gift') }}">Faire un don</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                        <a class="block p-4 text-sm font-semibold text-gray-400 active:text-blue-600 hover:bg-blue-50 hover:text-blue-600 rounded"
                             href="{{ route('follow.auth') }}">Suivre un patient</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                        <a class="block p-4 text-sm font-semibold text-gray-400 active:text-blue-600 hover:bg-blue-50 hover:text-blue-600 rounded"
                             href="{{ route('partner.create') }}">Devenir partenaire</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                        <a class="block p-4 text-sm font-semibold text-gray-400 active:text-blue-600 hover:bg-blue-50 hover:text-blue-600 rounded"
                             href="{{ route('request.create') }}">Faire une demande</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                        <a class="block p-4 text-sm font-semibold text-gray-400 active:text-blue-600 hover:bg-blue-50 hover:text-blue-600 rounded"
                             href="{{ route('request.auth') }}">Suivre une demande</a>
                     </li>
                     <li class="mb-1">
-                        <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                        <a class="block p-4 text-sm font-semibold text-gray-400 active:text-blue-600 hover:bg-blue-50 hover:text-blue-600 rounded"
                             href="{{ route('welcome') . '#contact' }}">Contact</a>
                     </li>
                 </ul>

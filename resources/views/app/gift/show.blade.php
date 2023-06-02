@@ -89,15 +89,41 @@
                                 class="text:lg font-semibold leading-normal mb-2 text-blueGray-700 uppercase text-center">
                                 Offrir une carte cadeau
                             </h3>
-                            @for ($i = 1; $i < 10; $i++)
-                                <a href="{{ route('gift.create', [$patient->id, $i * 100]) }}">
-                                    <button type="button"
-                                        class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-4 rounded-lg shadow hover:shadow-md outline-none focus:outline-none ease-linear m-4 transition-all duration-150">
-                                        <i class="fas fa-gift"></i>
-                                        {{ $i * 500 }}
-                                    </button>
-                                </a>
-                            @endfor
+                            <a href="{{ route('gift.create', [$patient->id, 100]) }}">
+                                <button type="button"
+                                    class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-4 rounded-lg shadow hover:shadow-md outline-none focus:outline-none ease-linear m-4 transition-all duration-150">
+                                    <i class="fas fa-gift"></i>
+                                    100
+                                </button>
+                            </a>
+                            <a href="{{ route('gift.create', [$patient->id, 200]) }}">
+                                <button type="button"
+                                    class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-4 rounded-lg shadow hover:shadow-md outline-none focus:outline-none ease-linear m-4 transition-all duration-150">
+                                    <i class="fas fa-gift"></i>
+                                    200
+                                </button>
+                            </a>
+                            <a href="{{ route('gift.create', [$patient->id, 500]) }}">
+                                <button type="button"
+                                    class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-4 rounded-lg shadow hover:shadow-md outline-none focus:outline-none ease-linear m-4 transition-all duration-150">
+                                    <i class="fas fa-gift"></i>
+                                    500
+                                </button>
+                            </a>
+                            <a href="{{ route('gift.create', [$patient->id, 1000]) }}">
+                                <button type="button"
+                                    class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-4 rounded-lg shadow hover:shadow-md outline-none focus:outline-none ease-linear m-4 transition-all duration-150">
+                                    <i class="fas fa-gift"></i>
+                                    1000
+                                </button>
+                            </a>
+                            <a href="{{ route('gift.create', [$patient->id, 2000]) }}">
+                                <button type="button"
+                                    class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-4 rounded-lg shadow hover:shadow-md outline-none focus:outline-none ease-linear m-4 transition-all duration-150">
+                                    <i class="fas fa-gift"></i>
+                                    2000
+                                </button>
+                            </a>
                             <a href="{{ route('gift.create', [$patient->id, 'custom']) }}">
                                 <button type="button"
                                     class="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-4 rounded-lg shadow hover:shadow-md outline-none focus:outline-none m-4 ease-linear transition-all duration-150">

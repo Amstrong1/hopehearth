@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CGUController;
 use App\Http\Controllers\GiftController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DonatorController;
@@ -44,6 +45,8 @@ Route::post('/partner/store', [PartnerController::class, 'store'])->name('partne
 
 Route::get('/structure/create', [StructureController::class, 'create'])->name('structure.create');
 Route::post('/structure/store', [StructureController::class, 'store'])->name('structure.store');
+
+Route::get('/cgu', [CGUController::class, 'index'])->name('cgu');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

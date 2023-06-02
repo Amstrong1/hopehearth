@@ -41,7 +41,7 @@
                         <li class="items-center">
                             <a href="{{ route('request.list') }}"
                                 class="text-xs uppercase py-3 font-bold block hover:text-pink-600">
-                                <i class="fas fa-tools mr-2 text-sm opacity-75"></i>
+                                <i class="fas fa-handshake mr-2 text-sm opacity-75"></i>
                                 Demande en cours
                             </a>
                         </li>
@@ -49,7 +49,7 @@
                         <li class="items-center">
                             <a href="{{ route('pending.list') }}"
                                 class="text-xs uppercase py-3 font-bold block hover:text-pink-600">
-                                <i class="fas fa-tools mr-2 text-sm opacity-75"></i>
+                                <i class="fas fa-hand-holding-heart mr-2 text-sm opacity-75"></i>
                                 Demande en attente
                             </a>
                         </li>
@@ -57,7 +57,7 @@
                         <li class="items-center">
                             <a href="{{ route('dashboard') }}"
                                 class="text-xs uppercase py-3 font-bold block hover:text-pink-600">
-                                <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+                                <i class="fas fa-child mr-2 text-sm opacity-75"></i>
                                 Nouvelle demande
                             </a>
                         </li>
@@ -65,7 +65,7 @@
                         <li class="items-center">
                             <a href="{{ route('request.pay') }}"
                                 class="text-xs uppercase py-3 font-bold block hover:text-pink-600">
-                                <i class="fas fa-table mr-2 text-sm opacity-75"></i>
+                                <i class="fas fa-comment-dollar mr-2 text-sm opacity-75"></i>
                                 Faire un encaissement
                             </a>
                         </li>
@@ -73,7 +73,7 @@
                         <li class="items-center">
                             <a href="{{ route('request.pay.history') }}"
                                 class="text-xs uppercase py-3 font-bold block hover:text-pink-600">
-                                <i class="fas fa-table mr-2 text-sm opacity-75"></i>
+                                <i class="fas fa-box-open mr-2 text-sm opacity-75"></i>
                                 Historique des encaissements
                             </a>
                         </li>
@@ -90,7 +90,7 @@
                         <li class="items-center">
                             <a href="{{ route('request.setting') }}"
                                 class="text-xs uppercase py-3 font-bold block hover:text-pink-600">
-                                <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+                                <i class="fas fa-toolbox mr-2 text-sm opacity-75"></i>
                                 Paramètres
                             </a>
                         </li>

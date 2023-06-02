@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Nonvizor') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -25,8 +25,7 @@
     <main>
         <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
             <div class="absolute top-0 w-full h-full bg-center bg-cover"
-                style="
-            background-image: url('assets/img/home.jpg');">
+                style="background-image: url('assets/img/home.jpg');">
                 <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
             </div>
             <div class="container relative mx-auto">
@@ -139,14 +138,15 @@
                             A PROPOS DE NOUS
                         </h3>
                         <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                            Don't let your uses guess by attaching tooltips and popoves to
-                            any element. Just make sure you enable them first via
-                            JavaScript.
+                            Faites connaissance avec notre équipe extraordinaire de jeunes gens engagés
+                            pour aider les personnes en difficultées à accéder aux soins médicaux dont elles ont
+                            besoin.
                         </p>
                         <p class="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-                            The kit comes with three pre-built pages to help you get started
-                            faster. You can change the text and images and you're good to
-                            go. Just make sure you enable them first via JavaScript.
+                            Animés d'une même passion pour faire la différence, nous venons
+                            d'horizons divers et apportons chacun un ensemble unique de compétences et de points de vue.
+                            Ensemble, nous formons un mélange harmonieux de créativité, de détermination et de
+                            compassion.
                         </p>
                     </div>
                     <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -343,6 +343,10 @@
                                     <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                                         href="tel:+22900112233"><i class="fas fa-mobile"></i> &nbsp +229 00 11 22
                                         33</a>
+                                </li>
+                                <li>
+                                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                        href="{{ route('cgu') }}"><i class="fas fa-file-contract"></i> &nbsp Conditions d'utilisation</a>
                                 </li>
                             </ul>
                         </div>

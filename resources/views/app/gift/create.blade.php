@@ -3,9 +3,9 @@
         <!-- Header -->
         <div class="relative bg-pink-600 pb-32 pt-12">
         </div>
-        <div class="px-4 md:px-10 mx-auto w-full -m-24">
+        <div class="px-4 md:px-10 w-full -m-24">
             <div class="flex flex-wrap">
-                <div class="w-full lg:w-8/12 px-4">
+                <div class="w-full lg:w-8/12 px-4 mx-auto">
                     <div
                         class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
                         <div class="rounded-t mb-0 px-6 py-6">
@@ -20,16 +20,6 @@
                                 @csrf
                                 <input type="hidden" name="validrequest_id" value="{{ $id }}">
                                 <div class="flex flex-wrap">
-                                    <div class="w-full md:w-6/12 px-4">
-                                        <div class="relative w-full mb-3">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                htmlFor="grid-password">
-                                                nom
-                                            </label>
-                                            <input type="text" name="donor_name"
-                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-line ar transition-all duration-150" />
-                                        </div>
-                                    </div>
                                     <div class="w-full md:w-6/12 px-4">
                                         <div class="relative w-full mb-3">
                                             <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
@@ -72,29 +62,7 @@
                                                     class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                                             </div>
                                         </div>
-                                        <div class="w-full md:w-6/12 px-4">
-                                            <div class="relative w-full mb-3">
-                                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                    htmlFor="grid-password">
-                                                    Message
-                                                </label>
-                                                <textarea name="msg" maxlength="155"
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
-                                        </textarea>
-                                            </div>
-                                        </div>
-                                    @endif
-                                    @if ($amount == 'custom')
-                                        <div class="w-full md:w-6/12 px-4">
-                                            <div class="relative w-full mb-3">
-                                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                                                    htmlFor="grid-password">
-                                                    Montant
-                                                </label>
-                                                <input type="number" name="amount"
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
-                                            </div>
-
+                                        <div class="w-full px-4">
                                             <div class="relative w-full mb-3">
                                                 <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                                                     htmlFor="grid-password">
@@ -105,6 +73,28 @@
                                                 </textarea>
                                             </div>
                                         </div>
+                                    @endif
+                                    @if ($amount == 'custom')
+                                        {{-- <div class="w-full px-4"> --}}
+                                        <div class="relative mb-3 px-4 w-6/12">
+                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                                htmlFor="grid-password">
+                                                Montant
+                                            </label>
+                                            <input type="number" name="amount"
+                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                        </div>
+
+                                        <div class="relative w-full mb-3 px-4">
+                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                                htmlFor="grid-password">
+                                                Message
+                                            </label>
+                                            <textarea name="msg" maxlength="155"
+                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
+                                                </textarea>
+                                        </div>
+                                        {{-- </div> --}}
                                     @endif
                                 </div>
 
