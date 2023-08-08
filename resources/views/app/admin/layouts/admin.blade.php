@@ -40,7 +40,7 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="relative md:ml-64 bg-blueGray-50">
+    <div class="relative md:ml-64 bg-slate-50">
 
         {{-- @include('app.admin.partials.sidenav') --}}
         {{ $slot }}

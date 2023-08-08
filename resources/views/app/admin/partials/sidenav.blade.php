@@ -15,7 +15,7 @@
 
                 <div class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
                     id="example-collapse-sidebar">
-                    <div class="md:min-w-full block pb-4 mb-4 border-b border-solid border-blueGray-200">
+                    <div class="md:min-w-full block pb-4 mb-4 border-b border-solid border-slate-200">
                         <div class="flex flex-wrap">
                             <div class="w-6/12">
                                 <a class="text-2xl grid grid-cols-2 font-bold leading-none" href="{{ route('welcome') }}">
@@ -32,7 +32,7 @@
 
                     <!-- Heading -->
                     <h6
-                        class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+                        class="md:min-w-full text-slate-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
                         Admin Layout Pages
                     </h6>
                     <!-- Navigation -->
@@ -82,7 +82,7 @@
                         <hr class="my-4 md:min-w-full" />
                         <!-- Heading -->
                         <h6
-                            class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+                            class="md:min-w-full text-slate-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
                             Profiles
                         </h6>
                         <!-- Navigation -->
@@ -120,7 +120,7 @@
         <ul class="absolute top-0 right-0 bottom-0 w-10/12 p-4 bg-white drop-shadow-2xl z-10 transition-all md:flex-col md:min-w-full flex flex-col list-none"
             :class="openMenu ? 'translate-x-0' : 'translate-x-full'">
 
-            <h6 class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+            <h6 class="md:min-w-full text-slate-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
                 Admin Layout Pages
             </h6>
             <!-- Navigation -->
@@ -160,7 +160,7 @@
             <!-- Divider -->
             <hr class="my-4 md:min-w-full" />
             <!-- Heading -->
-            <h6 class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
+            <h6 class="md:min-w-full text-slate-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
                 Profiles
             </h6>
             <!-- Navigation -->

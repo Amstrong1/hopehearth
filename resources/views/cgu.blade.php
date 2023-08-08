@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="relative bg-blueGray-50">
+    <div class="relative bg-slate-50">
         <!-- Header -->
         <div class="relative bg-pink-600 pb-32 pt-12">
 
@@ -8,10 +8,10 @@
             <div class="flex flex-wrap">
                 <div class="w-full lg:w-8/12 px-4 mx-auto">
                     <div
-                        class="relative flex flex-col justify-center min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
+                        class="relative flex flex-col justify-center min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-100 border-0">
                         <div class="rounded-t bg-white mb-0 px-6 py-6">
                             <div class="">
-                                <h1 class="text-blueGray-700 text-xl font-bold">
+                                <h1 class="text-slate-700 text-xl font-bold">
                                     Conditions d'utilisation
                                 </h1>
                             </div>

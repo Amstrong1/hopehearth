@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="relative bg-blueGray-50">
+    <div class="relative bg-slate-50">
 
         <div class="relative bg-pink-600 md:pt-32 pb-32 pt-12 md:sticky top-0">
             <div class="px-4 md:px-10 mx-auto w-full text-center text-white">
@@ -13,20 +13,20 @@
                         class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-4 md:sticky top-10">
                         <div class="p-6">
                             <div class="mt-6 lg:px-4">
-                                <h3 class=" text-lg font-semibold leading-normal mb-2 text-blueGray-700">
+                                <h3 class=" text-lg font-semibold leading-normal mb-2 text-slate-700">
                                     {{ $patient->prenom }}
                                 </h3>
-                                <div class="text-blueGray-600 my-2">
-                                    <span class="font-semibold mb-2 text-blueGray-700">Code de la demande :
+                                <div class="text-slate-600 my-2">
+                                    <span class="font-semibold mb-2 text-slate-700">Code de la demande :
                                     </span>{{ $patient->code }}
                                 </div>
-                                <div class="text-blueGray-600 my-2">
-                                    <span class="font-semibold mb-2 text-blueGray-700">
+                                <div class="text-slate-600 my-2">
+                                    <span class="font-semibold mb-2 text-slate-700">
                                         Profession :
                                     </span>
                                     {{ $patient->career }}
                                 </div>
-                                <div class="text-blueGray-600 my-2">
+                                <div class="text-slate-600 my-2">
                                     @php
                                         $hosto = DB::table('requests')
                                             ->join('hospitals', 'hospitals.id', '=', 'requests.hospital_id')
@@ -34,45 +34,45 @@
                                             ->where('code', $patient->request_code)
                                             ->first();
                                     @endphp
-                                    <span class="font-semibold mb-2 text-blueGray-700">
+                                    <span class="font-semibold mb-2 text-slate-700">
                                         Hopital :
                                     </span>
                                     {{ $hosto->name }}
                                 </div>
-                                <div class="text-blueGray-600 my-2">
+                                <div class="text-slate-600 my-2">
                                     <div class="justify-between">
-                                        <span class="font-semibold mb-2 text-blueGray-700">
+                                        <span class="font-semibold mb-2 text-slate-700">
                                             Sexe : </span>
                                         {{ $patient->sex }}
                                     </div>
                                 </div>
-                                <div class="text-blueGray-600 my-2">
-                                    <div class="justify-between"><span class="font-semibold mb-2 text-blueGray-700">Age
+                                <div class="text-slate-600 my-2">
+                                    <div class="justify-between"><span class="font-semibold mb-2 text-slate-700">Age
                                             :
                                         </span>{{ dateDiff(date('Y-m-d'), $patient->birthday) }}
                                         {{ ' ans' }}
                                     </div>
                                 </div>
-                                <div class="text-blueGray-600 my-2">
-                                    <span class="font-semibold mb-2 text-blueGray-700">
+                                <div class="text-slate-600 my-2">
+                                    <span class="font-semibold mb-2 text-slate-700">
                                         Traitement :
                                     </span>
                                     {{ $patient->treatment }}
                                 </div>
-                                <div class="text-blueGray-600 my-2">
-                                    <span class="font-semibold mb-2 text-blueGray-700">
+                                <div class="text-slate-600 my-2">
+                                    <span class="font-semibold mb-2 text-slate-700">
                                         Coût :
                                     </span>
                                     {{ number_format($patient->cost, 0, '', ' ') }}
                                 </div>
-                                <div class="text-blueGray-600 my-2">
+                                <div class="text-slate-600 my-2">
                                     @php
                                         $gift = DB::table('gifts')
                                             ->select(DB::raw('SUM(amount) as total'))
                                             ->where('validrequest_id', $patient->request_id)
                                             ->first();
                                     @endphp
-                                    <span class="font-semibold mb-2 text-blueGray-700">
+                                    <span class="font-semibold mb-2 text-slate-700">
                                         Déja recu :
                                     </span>
                                     {{ number_format($gift->total, 0, '', ' ') }}
@@ -86,7 +86,7 @@
                         class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-4">
                         <div class="p-6">
                             <h3
-                                class="text:lg font-semibold leading-normal mb-2 text-blueGray-700 uppercase text-center">
+                                class="text:lg font-semibold leading-normal mb-2 text-slate-700 uppercase text-center">
                                 Offrir une carte cadeau
                             </h3>
                             <a href="{{ route('gift.create', [$patient->id, 100]) }}">

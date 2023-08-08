@@ -12,21 +12,21 @@
                             <h1 class="text-2xl font-semibold">Se connecter</h1>
                         </div>
                         <div class="mb-4">
-                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                 htmlFor="grid-password">
                                 Login
                             </label>
                             <input type="text" name="login"
-                                class="border-1 px-3 py-3 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                class="border-1 px-3 py-3 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                         </div>
 
                         <div class="mb-4">
-                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                 htmlFor="grid-password">
                                 Mot de passe
                             </label>
                             <input type="password" name="password"
-                                class="border-1 px-3 py-3 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                class="border-1 px-3 py-3 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                         </div>
 
                         <div class="mb-4">
@@ -35,7 +35,7 @@
 
                         <div class="text-center mt-6">
                             <button type="submit"
-                                class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150">
+                                class="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150">
                                 Connexion
                             </button>
                         </div>

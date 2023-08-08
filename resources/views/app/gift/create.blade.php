@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="relative bg-blueGray-50">
+    <div class="relative bg-slate-50">
         <!-- Header -->
         <div class="relative bg-pink-600 pb-32 pt-12">
         </div>
@@ -7,10 +7,10 @@
             <div class="flex flex-wrap">
                 <div class="w-full lg:w-8/12 px-4 mx-auto">
                     <div
-                        class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0">
+                        class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-100 border-0">
                         <div class="rounded-t mb-0 px-6 py-6">
                             <div class="text-center flex justify-between">
-                                <h6 class="text-blueGray-700 text-xl font-bold">
+                                <h6 class="text-slate-700 text-xl font-bold">
                                     Confirmer ma donation
                                 </h6>
                             </div>
@@ -22,54 +22,54 @@
                                 <div class="flex flex-wrap">
                                     <div class="w-full md:w-6/12 px-4">
                                         <div class="relative w-full mb-3">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                 htmlFor="grid-password">
                                                 Prenom
                                             </label>
                                             <input type="email" name="donor_fname"
-                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                                class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                                         </div>
                                     </div>
                                     <div class="w-full md:w-6/12 px-4">
                                         <div class="relative w-full mb-3">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                 htmlFor="grid-password">
                                                 Email
                                             </label>
                                             <input type="text" name="donor_email"
-                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                                class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                                         </div>
                                     </div>
                                     <div class="w-full md:w-6/12 px-4">
                                         <div class="relative w-full mb-3">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                 htmlFor="grid-password">
                                                 Tel
                                             </label>
                                             <input type="tel" name="donor_tel"
-                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                                class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                                         </div>
                                     </div>
                                     @if ($amount !== 'custom')
                                         <div class="w-full md:w-6/12 px-4">
                                             <div class="relative w-full mb-3">
-                                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                                <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                     htmlFor="grid-password">
                                                     Montant
                                                 </label>
                                                 <input type="number" name="amount" value="{{ $amount }}"
                                                     readonly
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                                    class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                                             </div>
                                         </div>
                                         <div class="w-full px-4">
                                             <div class="relative w-full mb-3">
-                                                <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                                <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                     htmlFor="grid-password">
                                                     Message
                                                 </label>
                                                 <textarea name="msg" maxlength="155"
-                                                    class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
+                                                    class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
                                                 </textarea>
                                             </div>
                                         </div>
@@ -77,21 +77,21 @@
                                     @if ($amount == 'custom')
                                         {{-- <div class="w-full px-4"> --}}
                                         <div class="relative mb-3 px-4 w-6/12">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                 htmlFor="grid-password">
                                                 Montant
                                             </label>
                                             <input type="number" name="amount"
-                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                                class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                                         </div>
 
                                         <div class="relative w-full mb-3 px-4">
-                                            <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                                            <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                                 htmlFor="grid-password">
                                                 Message
                                             </label>
                                             <textarea name="msg" maxlength="155"
-                                                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
+                                                class="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
                                                 </textarea>
                                         </div>
                                         {{-- </div> --}}
@@ -101,8 +101,8 @@
                                 {{-- <div class="my-2">
                                     <label class="inline-flex items-center cursor-pointer">
                                         <input id="customCheckLogin" type="checkbox"
-                                            class="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150" />
-                                        <span class="ml-2 text-sm font-semibold text-blueGray-600">
+                                            class="form-checkbox border-0 rounded text-slate-700 ml-1 w-5 h-5 ease-linear transition-all duration-150" />
+                                        <span class="ml-2 text-sm font-semibold text-slate-600">
                                             Je fais un don
                                             <a href="javascript:void(0)" class="text-pink-500">
                                                 anonyme </a>

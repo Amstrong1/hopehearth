@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="relative bg-blueGray-50">
+    <div class="relative bg-slate-50">
 
         <div class="relative bg-pink-600 md:pt-32 pb-32 pt-12">
             <div class="px-4 md:px-10 mx-auto w-full text-center text-white">
@@ -14,11 +14,11 @@
                             class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-4">
                             <div class="p-6">
                                 <div class="mt-6">
-                                    <h3 class="text-md font-semibold leading-normal mb-2 text-blueGray-700">
+                                    <h3 class="text-md font-semibold leading-normal mb-2 text-slate-700">
                                         {{ $list->prenom }}
                                     </h3>
 
-                                    <div class="text-blueGray-600 my-2 text-sm">
+                                    <div class="text-slate-600 my-2 text-sm">
                                         @php
                                             $hosto = DB::table('requests')
                                                 ->join('hospitals', 'hospitals.id', '=', 'requests.hospital_id')
@@ -29,15 +29,15 @@
                                         {{ 'Hopital : ' . $hosto->name }}
                                     </div>
 
-                                    <div class="text-blueGray-600 my-2 text-sm">
+                                    <div class="text-slate-600 my-2 text-sm">
                                         {{ 'Traitement : ' . $list->treatment }}
                                     </div>
 
-                                    <div class="text-blueGray-600 my-2 text-sm">
+                                    <div class="text-slate-600 my-2 text-sm">
                                         {{ 'Coût : ' . number_format($list->cost, 0, '', ' ') }}
                                     </div>
 
-                                    <div class="text-blueGray-600 my-2 text-sm">
+                                    <div class="text-slate-600 my-2 text-sm">
                                         @php
                                             $gift = DB::table('gifts')
                                                 ->select(DB::raw('SUM(amount) as total'))
@@ -52,7 +52,7 @@
                                         @endif
                                     </div>
 
-                                    <div class="text-blueGray-600 my-2 text-sm flex">
+                                    <div class="text-slate-600 my-2 text-sm flex">
                                         {{ 'Sexe :' . $list->sex }}
                                         {{ 'Age : ' . dateDiff(date('Y-m-d'), $list->birthday) }} {{ ' ans' }}
                                     </div>

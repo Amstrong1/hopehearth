@@ -13,7 +13,7 @@
                 <div class="w-full mb-12 px-4">
                     <div class="relative flex flex-col min-w-0 break-words w-full mb-6 rounded">
                         @if ($lists->count() !== 0)
-                            <div class="block w-full overflow-x-auto bg-blueGray-100">
+                            <div class="block w-full overflow-x-auto bg-slate-100">
                                 <table class="items-center w-full bg-transparent border-collapse">
                                     <thead>
                                         <tr>
