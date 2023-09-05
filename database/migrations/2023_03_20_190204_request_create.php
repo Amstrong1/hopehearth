@@ -24,7 +24,18 @@ return new class extends Migration
             $table->string('treatment');
             $table->string('cost');
             $table->string('code');
-            $table->string('valid')->default('false');
+
+            $table->string('birthday');
+            $table->string('sex');
+            $table->string('career');
+            $table->string('tel');
+            $table->string('ms');
+            $table->string('city');
+            $table->string('block');
+            $table->string('square');
+            $table->string('house');
+
+            $table->boolean('valid')->default(1);
             $table->timestamps();
         });
     }

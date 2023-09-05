@@ -15,17 +15,13 @@ class GiftController extends Controller
     public function index()
     {
         // $lists = ValidRequest::all();
-        $lists = DB::table('validrequests')
-            ->join('requests', 'validrequests.request_code', '=', 'requests.code')
-            ->select('validrequests.*', 'requests.treatment', 'requests.cost')
-            ->where('validrequests.valid', 'true')
-            ->get();
+        $lists = RequestList::where('valid', 1)->get();
         return view('app.gift.index', compact('lists'));
     }
 
     public function show($id)
     {
-        $patient = ValidRequest::where('id', $id)->first();
+        $patient = RequestList::where('id', $id)->first();
         return view('app.gift.show', compact('patient', 'id'));
     }
 

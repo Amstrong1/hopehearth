@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Requests\StoreRequestCreate;
-use App\Models\ValidRequest;
 
 class AdminController extends Controller
 {
@@ -20,9 +19,6 @@ class AdminController extends Controller
 
     public function req_store(StoreRequestCreate $request)
     {
-        $code = gen_code();
-        $request->session()->put('code', $code);
-
         $valid = new RequestList();
         $valid->hospital_id = Auth::user()->hospital->id;
         $valid->name_doctor = $request->doctor_name;
@@ -34,7 +30,18 @@ class AdminController extends Controller
         $valid->diagnostic = $request->diagnostic;
         $valid->treatment = $request->treatment;
         $valid->cost = $request->cost;
-        $valid->code = $request->session()->get('code');
+
+        $valid->birthday = $request->birthday;
+        $valid->sex = $request->sex;
+        $valid->career = $request->career;
+        $valid->tel = $request->tel;
+        $valid->ms = $request->ms;
+        $valid->city = $request->city;
+        $valid->block = $request->block;
+        $valid->square = $request->square;
+        $valid->house = $request->house;
+
+        $valid->code = gen_code();
 
         if ($valid->save()) {
             Alert::toast("La demande a été enregistré", 'success');
@@ -47,12 +54,8 @@ class AdminController extends Controller
 
     public function req_list()
     {
-        $lists = DB::table('validrequests')
-            ->join('requests', 'validrequests.request_code', '=', 'requests.code')
-            ->select('validrequests.*', 'requests.treatment', 'requests.cost')
-            ->where('hospital_id', Auth::user()->hospital->id)
-            ->where('validrequests.valid', 'true')
-            ->get();
+        $lists = RequestList::where('hospital_id', Auth::user()->hospital->id)->get();
+
         return view('app.admin.req_list', compact('lists'));
     }
 
@@ -66,9 +69,8 @@ class AdminController extends Controller
     {
         // $lists = Pay::where('hospital_id', Auth::user()->hospital->id)->get();
         $lists = DB::table('pays')
-            ->join('validrequests', 'validrequests.code', '=', 'pays.validrequest_code')
-            ->join('requests', 'requests.code', '=', 'validrequests.request_code')
-            ->select('validrequests.*', 'pays.*', 'requests.treatment',  'requests.cost')
+            ->join('requests', 'requests.code', '=', 'pays.validrequest_code')
+            ->select('pays.*', 'requests.treatment',  'requests.cost')
             ->where('pays.hospital_id', Auth::user()->hospital->id)
             ->where('pays.status', 'unconfirmed')
             ->get();
@@ -81,7 +83,7 @@ class AdminController extends Controller
         $pay = Pay::where('validrequest_code', $request->code)
             ->update(['status' => 'confirmed', 'updated_by' => Auth::user()->login]);
 
-        $delete = ValidRequest::where('code', $request->code)
+        $delete = RequestList::where('code', $request->code)
             ->update(['valid' => 'false']);
 
         if ($pay && $delete) {
@@ -95,11 +97,9 @@ class AdminController extends Controller
 
     public function pay_history()
     {
-        // $lists = Pay::where('hospital_id', Auth::user()->hospital->id)->get();
         $lists = DB::table('pays')
-            ->join('validrequests', 'validrequests.code', '=', 'pays.validrequest_code')
-            ->join('requests', 'requests.code', '=', 'validrequests.request_code')
-            ->select('validrequests.*', 'pays.*', 'requests.treatment',  'requests.cost')
+            ->join('requests', 'requests.code', '=', 'pays.validrequest_code')
+            ->select('pays.*', 'requests.treatment',  'requests.cost')
             ->where('pays.hospital_id', Auth::user()->hospital->id)
             ->where('pays.status', 'confirmed')
             ->get();

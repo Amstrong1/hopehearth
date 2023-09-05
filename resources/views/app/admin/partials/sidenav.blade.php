@@ -46,13 +46,13 @@
                             </a>
                         </li>
 
-                        <li class="items-center">
+                        {{-- <li class="items-center">
                             <a href="{{ route('pending.list') }}"
                                 class="text-xs uppercase py-3 font-bold block hover:text-pink-600">
                                 <i class="fas fa-hand-holding-heart mr-2 text-sm opacity-75"></i>
                                 Demande en attente
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="items-center">
                             <a href="{{ route('dashboard') }}"

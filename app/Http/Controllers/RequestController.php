@@ -17,6 +17,7 @@ class RequestController extends Controller
     {
         return view('app.request.create');
     }
+    
     public function store(StoreValidRequest $request)
     {
         $check = RequestList::where('code', $request->code)->first();

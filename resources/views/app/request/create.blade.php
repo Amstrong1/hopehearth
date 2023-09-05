@@ -61,8 +61,11 @@
                                             htmlFor="grid-password">
                                             Sexe
                                         </label>
-                                        <input required type="text" name="sex"
-                                            class="border-0 px-3 py-3 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                        <select name="sex" id=""
+                                            class="border-0 px-3 py-3 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
+                                            <option value="F">Féminin</option>
+                                            <option value="M">Masculin</option>
+                                        </select>
                                     </div>
 
                                     <div class="my-4">

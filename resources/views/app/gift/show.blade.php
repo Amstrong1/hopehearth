@@ -27,17 +27,10 @@
                                     {{ $patient->career }}
                                 </div>
                                 <div class="text-slate-600 my-2">
-                                    @php
-                                        $hosto = DB::table('requests')
-                                            ->join('hospitals', 'hospitals.id', '=', 'requests.hospital_id')
-                                            ->select('hospitals.name')
-                                            ->where('code', $patient->request_code)
-                                            ->first();
-                                    @endphp
                                     <span class="font-semibold mb-2 text-slate-700">
                                         Hopital :
                                     </span>
-                                    {{ $hosto->name }}
+                                    {{ $patient->hospital->name }}
                                 </div>
                                 <div class="text-slate-600 my-2">
                                     <div class="justify-between">

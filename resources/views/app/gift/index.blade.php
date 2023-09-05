@@ -15,18 +15,11 @@
                             <div class="p-6">
                                 <div class="mt-6">
                                     <h3 class="text-md font-semibold leading-normal mb-2 text-slate-700">
-                                        {{ $list->prenom }}
+                                        {{ $list->fname_patient }}
                                     </h3>
 
                                     <div class="text-slate-600 my-2 text-sm">
-                                        @php
-                                            $hosto = DB::table('requests')
-                                                ->join('hospitals', 'hospitals.id', '=', 'requests.hospital_id')
-                                                ->select('hospitals.name')
-                                                ->where('code', $list->request_code)
-                                                ->first();
-                                        @endphp
-                                        {{ 'Hopital : ' . $hosto->name }}
+                                        {{ 'Hopital : ' . $list->hospital->name }}
                                     </div>
 
                                     <div class="text-slate-600 my-2 text-sm">
@@ -52,9 +45,9 @@
                                         @endif
                                     </div>
 
-                                    <div class="text-slate-600 my-2 text-sm flex">
-                                        {{ 'Sexe :' . $list->sex }}
-                                        {{ 'Age : ' . dateDiff(date('Y-m-d'), $list->birthday) }} {{ ' ans' }}
+                                    <div class="text-slate-600 my-2 text-sm flex justify-between">
+                                       <span> {{ 'Sexe : ' . $list->sex }} </span>
+                                       <span> {{ 'Age : ' . dateDiff(date('Y-m-d'), $list->birthday) }} {{ ' ans' }} </span>
                                     </div>
 
                                     <div class="text-center mt-4 w-full">
