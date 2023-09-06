@@ -19,15 +19,15 @@
                                     </h3>
 
                                     <div class="text-slate-600 my-2 text-sm">
-                                        {{ 'Hopital : ' . $list->hospital->name }}
+                                       <span class="font-bold">Hopital : </span> {{ $list->hospital->name }}
                                     </div>
 
                                     <div class="text-slate-600 my-2 text-sm">
-                                        {{ 'Traitement : ' . $list->treatment }}
+                                        <span class="font-bold">Traitement :</span> {{ $list->treatment }}
                                     </div>
 
                                     <div class="text-slate-600 my-2 text-sm">
-                                        {{ 'Coût : ' . number_format($list->cost, 0, '', ' ') }}
+                                        <span class="font-bold">Traitement :</span> {{ 'Coût : ' . number_format($list->cost, 0, '', ' ') }}
                                     </div>
 
                                     <div class="text-slate-600 my-2 text-sm">
@@ -39,15 +39,15 @@
                                                 ->first();
                                         @endphp
                                         @if (isset($gift->total))
-                                            {{ 'Montant déja récolté : ' . number_format($gift->total, 0, '', ' ') }}
+                                        <span class="font-bold">Montant déja récolté : </span> {{ number_format($gift->total, 0, '', ' ') }}
                                         @else
-                                            Montant déja récolté : 0
+                                        <span class="font-bold">Montant déja récolté : </span>  0
                                         @endif
                                     </div>
 
                                     <div class="text-slate-600 my-2 text-sm flex justify-between">
-                                       <span> {{ 'Sexe : ' . $list->sex }} </span>
-                                       <span> {{ 'Age : ' . dateDiff(date('Y-m-d'), $list->birthday) }} {{ ' ans' }} </span>
+                                        <div> <span class="font-bold">Sexe : </span> {{ $list->sex }} </div>
+                                        <div> <span class="font-bold">Age : </span> {{ dateDiff(date('Y-m-d'), $list->birthday) }} {{ ' ans' }} </div>
                                     </div>
 
                                     <div class="text-center mt-4 w-full">

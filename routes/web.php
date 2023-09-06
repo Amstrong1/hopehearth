@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CGUController;
 use App\Http\Controllers\GiftController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DonatorController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProfileController;
@@ -47,6 +48,9 @@ Route::get('/structure/create', [StructureController::class, 'create'])->name('s
 Route::post('/structure/store', [StructureController::class, 'store'])->name('structure.store');
 
 Route::get('/cgu', [CGUController::class, 'index'])->name('cgu');
+
+Route::post('/contact', [ContactController::class, 'index'])->name('contact');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

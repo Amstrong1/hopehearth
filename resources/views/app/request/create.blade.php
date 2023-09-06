@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                            <form action="{{ route('request.store') }}" method="post">
+                            {{-- <form action="{{ route('request.store') }}" method="post">
                                 @csrf
                                 <div class="md:grid grid-cols-3 gap-3 my-4">
                                     <div class="my-4">
@@ -104,20 +104,6 @@
                                             class="border-0 px-3 py-3 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
                                     </div>
 
-                                    {{-- <div class="my-4">
-                                        <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
-                                            htmlFor="grid-password">
-                                            Centre d'hospitalisation
-                                        </label>
-                                        <select name="hospital" id="hospital"
-                                            class="border-0 px-3 py-3 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150">
-                                            @foreach ($hospitals as $hospital)
-                                                <option value="{{ $hospital->id }}"> {{ $hospital->name }}
-                                                </option>
-                                            @endforeach
-                                        </select>
-                                    </div> --}}
-
                                     <div class="my-4">
                                         <label class="block uppercase text-slate-600 text-xs font-bold mb-2"
                                             htmlFor="grid-password">
@@ -165,7 +151,13 @@
                                         Soumettre
                                     </button>
                                 </div>
-                            </form>
+                            </form> --}}
+
+                            Veuillez vous rapprocher d'un hopital partenaire pour faire votre demande.
+                            Voici une liste de nos partenaires : 
+                            <ul>
+                                <li>Hôpital de Zone de Mènontin</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
