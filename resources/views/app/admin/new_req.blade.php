@@ -173,8 +173,13 @@
                                             htmlFor="grid-password">
                                             Situation matrimoniale
                                         </label>
-                                        <input required type="text" name="ms"
+                                        <select name="ms"
                                             class="border-0 px-3 py-3 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" />
+                                            <option value="C">Célibataire</option>
+                                            <option value="M">Marié(e)</option>
+                                            <option value="V">Veuf(ve)</option>
+                                            <option value="D">Divorcé(e)</option>
+                                        </select>
                                     </div>
 
                                     <div class="my-4">

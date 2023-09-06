@@ -24,7 +24,7 @@ class StructureController extends Controller
             $user_id = User::where('login', $request->login)->first();
             $structure = new Hospital();
             $structure->user_id = $user_id->id;
-            $structure->name = $request->login;
+            $structure->name = $request->name;
             $structure->city = $request->city;
             $structure->adress = $request->adress;
             $structure->country = $request->country;
