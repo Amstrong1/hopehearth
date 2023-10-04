@@ -3,10 +3,10 @@
 <div class="bg-blue-500">
     <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
         <a class="" href="{{ route('welcome') }}">
-            {{-- <img src="{{ asset('assets/img/logo.png') }}" alt="" srcset=""> --}}
+            {{-- <img src="{{ asset('assets/img/logo.svg') }}" alt="" srcset=""> --}}
             <div class="h-12">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="NONVIZOR"
-                    class="shadow w-full h-full align-middle border-none" />
+                <img src="{{ asset('assets/img/logo.svg') }}" alt="NONVIZOR"
+                    class="shadow w-full h-full border-none" />
             </div>
         </a>
         <div class="lg:hidden">
